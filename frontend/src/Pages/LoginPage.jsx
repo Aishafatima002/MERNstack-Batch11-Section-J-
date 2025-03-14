@@ -7,6 +7,7 @@ const Login = () => {
 	const [formData, setFormData] = useState({
 		email: '',
 		password: '',
+		
 	});
 
 	const [loading, setLoading] = useState(false);
@@ -38,6 +39,7 @@ const Login = () => {
 
 			if (response.ok) {
 				toast.success(data.message);
+				localStorage.setItem('token', data.token);
 				navigate('/');
 			} else {
 				toast.error(data.message || 'Invalid credentials');

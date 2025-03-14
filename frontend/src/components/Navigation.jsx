@@ -27,6 +27,7 @@ const Navigation = () => {
 						<NavLink to='/contact' text='Contact' />
 						<NavLink to='/signup' text='Sign Up' />
 						<NavLink to='/login' text='Login' />
+						<NavLink to='/profile' text='Profile' />
 					</div>
 
 					<div className='hidden lg:flex items-center'>
@@ -51,6 +52,7 @@ const Navigation = () => {
 					<NavLinkMobile to='/contact' text='Contact' onClick={toggleMenu} />
 					<NavLinkMobile to='/signup' text='Sign Up' onClick={toggleMenu} />
 					<NavLinkMobile to='/login' text='Login' onClick={toggleMenu} />
+					<NavLinkMobile to='/profile' text='Profile' onClick={toggleMenu} />
 				</div>
 			</div>
 		</nav>

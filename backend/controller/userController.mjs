@@ -68,7 +68,10 @@ import chalk from "chalk";
   const getLoggedInUser = async (req, res) => {
     try {
       // The tokenVerification middleware already decodes the token and attaches the user's email to `req.user`
-      const user = await User.findOne({ email: req.user.email }).select("-password"); // Exclude password from the response
+      const user = await User.findOne({ email: req.user.email }).select("-password"); 
+      // Exclude password from the response
+      console.log("User Data:", user);
+
   
       if (!user) {
         return res.status(404).json({ status: 404, message: "User not found" });
@@ -97,6 +100,14 @@ import chalk from "chalk";
       res.json({ message: "User updated successfully" ,user});
     } catch (err) {
       res.status(400).json({ error: err, status: 400 });
-    }
+    };
+    
   };
+  
+
+  
+
+
+
+  
   export { login, getAllUsers ,createUser , deleteUser , updateUser,getLoggedInUser };

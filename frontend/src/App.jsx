@@ -7,6 +7,7 @@ import About from './Pages/About';
 import Footer from './components/Footer';
 import LoginPage from './Pages/LoginPage';
 import SignUp from './Pages/signup';
+import Profile from './Pages/Profile';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -27,10 +28,12 @@ const App = () => {
 			<Navigation />
 			<Routes>
 				<Route path='/' element={<Home />} />
+				<Route path='/profile' element={<Profile />} />
 				<Route path='/contact' element={<Contact />} />
 				<Route path='/about' element={<About />} />
 				<Route path='/login' element={<LoginPage />} />
 				<Route path='/signup' element={<SignUp />} />
+				
 			</Routes>
 			<Footer />
 		</>
